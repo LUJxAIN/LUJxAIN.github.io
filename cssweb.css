@@ -1,0 +1,218 @@
+
+/* Class selector */
+
+.background {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-image: linear-gradient(90deg, #c6ffdd 35%, #fbd786 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(90deg, #c6ffdd 0%,
+    #f7797d 35%, #fbd786 100%);
+    filter: blur(10px);
+    opacity: 80%;
+    height: 260px;
+    width: 300px;
+    border-radius: 23% 77% 59% 41% / 44% 55% 45% 56%;
+    z-index: -1;
+    margin-top: 2%;
+    margin-right: 90%;
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(90deg, #c6ffdd 0%,
+    #f7797d 35%, #fbd786 100%);
+    filter: blur(10px);
+    opacity: 80%;
+    height: 300px;
+    width: 300px;
+    border-radius: 30% 70% 42% 58% / 38% 43% 57% 62%;
+    z-index: -1;
+    top: 400px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.info_background {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-image: linear-gradient(90deg, #c6ffdd 35%, #fbd786 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.info_background::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(90deg, #c6ffdd 0%,
+    #f7797d 35%, #fbd786 100%);
+    filter: blur(10px);
+    opacity: 80%;
+    height: 260px;
+    width: 300px;
+    border-radius: 23% 77% 59% 41% / 44% 55% 45% 56%;
+    z-index: -1;
+    margin-top: 2%;
+    margin-right: 90%;
+}
+
+.info_background::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(90deg, #c6ffdd 0%,
+    #f7797d 35%, #fbd786 100%);
+    filter: blur(10px);
+    opacity: 80%;
+    height: 300px;
+    width: 300px;
+    border-radius: 30% 70% 42% 58% / 38% 43% 57% 62%;
+    z-index: -1;
+    bottom: 40px;
+    right: 2px;
+}
+
+.summary{
+    padding-top: 50px;
+}
+
+.circular_logo{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 3px 5px 5px gray;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact a{
+    padding: 30px;
+}
+
+.navbar {
+    background-color: rgb(255,255,255,0.5);
+}
+
+.projects{
+    width: auto;
+    height: auto;
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.projects section{
+    display: flex;
+}
+
+.projects p{
+    text-align: left;
+    font-size: medium;
+    margin-right: 20px;
+}
+
+.projects img, .projects video{
+    padding-bottom: 50px;
+}
+
+#ui-projects::-webkit-scrollbar, #flutter-projects::-webkit-scrollbar, #java-projects::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Handle */
+  #ui-projects::-webkit-scrollbar-thumb, #flutter-projects::-webkit-scrollbar-thumb, #java-projects::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(247, 121, 125, 0.75);
+  }
+
+/* ID selector */
+
+#summary a{
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 150px;
+}
+
+#ui-projects, #flutter-projects, #java-projects{
+    display: flex;
+    overflow-x: auto;
+}
+
+#Contact_me{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#Contact_me h1{
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Type/element selector */
+
+html{
+    scroll-behavior: smooth;
+    transition: ease-in-out;
+}
+
+section{
+    padding: 20px;
+    margin-top: 30px;
+}
+
+p{
+    text-align: center;
+    font-size: larger;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+
+@media (min-width:576px) and (min-width:768px) and (min-width:992px) {
+    .background {
+        background-image: linear-gradient(90deg, #c6ffdd, #fbd786) fixed;
+    }
+    
+}
+
+@media (max-width:900px) {
+    .projects p{
+        font-size: small;
+    }
+}
+
