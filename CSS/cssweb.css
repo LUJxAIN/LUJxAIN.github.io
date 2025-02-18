@@ -2,85 +2,7 @@
 /* Class selector */
 
 .background {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    overflow-x: auto;
-    overflow-y: auto;
-    background-image: linear-gradient(90deg, #c6ffdd 35%, #fbd786 100%);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.background::before {
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(90deg, #c6ffdd 0%,
-    #f7797d 35%, #fbd786 100%);
-    filter: blur(10px);
-    opacity: 80%;
-    height: 260px;
-    width: 300px;
-    border-radius: 23% 77% 59% 41% / 44% 55% 45% 56%;
-    z-index: -1;
-    margin-top: 2%;
-    margin-right: 90%;
-}
-
-.background::after {
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(90deg, #c6ffdd 0%,
-    #f7797d 35%, #fbd786 100%);
-    filter: blur(10px);
-    opacity: 80%;
-    height: 300px;
-    width: 300px;
-    border-radius: 30% 70% 42% 58% / 38% 43% 57% 62%;
-    z-index: -1;
-    top: 400px;
-    bottom: 20px;
-    right: 20px;
-}
-
-.info_background {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    overflow-x: auto;
-    overflow-y: auto;
-    background-image: linear-gradient(90deg, #c6ffdd 35%, #fbd786 100%);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-.info_background::before {
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(90deg, #c6ffdd 0%,
-    #f7797d 35%, #fbd786 100%);
-    filter: blur(10px);
-    opacity: 80%;
-    height: 260px;
-    width: 300px;
-    border-radius: 23% 77% 59% 41% / 44% 55% 45% 56%;
-    z-index: -1;
-    margin-top: 2%;
-    margin-right: 90%;
-}
-
-.info_background::after {
-    content: '';
-    position: absolute;
-    background-image: linear-gradient(90deg, #c6ffdd 0%,
-    #f7797d 35%, #fbd786 100%);
-    filter: blur(10px);
-    opacity: 80%;
-    height: 300px;
-    width: 300px;
-    border-radius: 30% 70% 42% 58% / 38% 43% 57% 62%;
-    z-index: -1;
-    bottom: 40px;
-    right: 2px;
+    font-family: 'Crimson Pro';
 }
 
 .summary{
@@ -105,56 +27,50 @@
     padding: 30px;
 }
 
-.navbar {
-    background-color: rgb(255,255,255,0.5);
-}
-
-.projects{
-    width: auto;
-    height: auto;
-    background-color: rgb(255,255,255,0.5);
-    border-radius: 25px;
-    margin: 20px;
-    padding: 20px;
-}
-
-.projects section{
-    display: flex;
-    align-items: center;
-}
-
-.projects p{
-    text-align: left;
-    font-size: medium;
-    margin: 0;
-}
-
-.projects img, .projects video{
+.project-card{
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 50px;
 }
 
+.project-card .content{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content:hover{
+    background-color: #9d866c;
+    color: #FAF9F6;
+}
+
+.cards img{
+    padding-bottom: 50px;
+}
 
 /* ID selector */
 
-#ui-projects, #flutter-projects, #java-projects{
-    display: flex;
-}
-
 #summary a{
-    color: black;
+    color:  #0B1215;
     font-weight: bold;
     font-size: medium;
     text-decoration: none;
-    border: 2px solid black;
+    border: 2px solid  #0B1215;
     border-radius: 25px;
     padding: 10px;
     position: relative;
     text-align: center;
     display: block;
     margin: auto;
-    width: 150px;
+    width: 250px;
 }
 
+#summary a:hover{
+    color: #FAF9F6;   
+    background-color:  #0B1215;
+    border: 2px solid  #0B1215;
+}
 #Contact_me{
     width: 400px;
     height: 300px;
@@ -171,16 +87,99 @@
     text-decoration: none;
 }
 
+.skills-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Skills .cards p{
+    text-align: center;
+}
+
+#projects #thabbit, #projects #restaurants, #projects #to-do, #projects #dictionary{
+    display: none;
+}
+
+#who-am-i{
+    padding-bottom: 100px;
+    text-align: left;
+}
+
+#projects a{
+    cursor: pointer;
+}
+
+.content a:hover{
+    color: #FAF9F6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.slide-in {
+    transform: translateX(-200%);
+}
+
+.slide-in.show-animation {
+    animation: slideIn 2s both;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cards h4 {
+    position: relative;
+    font-weight: bold;
+
+}
+
+.content{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 0;
+}
+
+#mainpage-projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainpage-projects .project-card{
+    margin-bottom: 100px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
 /* Type/element selector */
 
 html{
     scroll-behavior: smooth;
     transition: ease-in-out;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
 }
 
 section{
     padding: 20px;
     margin-top: 30px;
+    text-align: center;
 }
 
 p{
@@ -188,73 +187,22 @@ p{
     font-size: larger;
 }
 
-h2{
-    text-decoration: underline;
+section h2{
+    color: #9d866c;
+    margin-bottom: 20px;
 }
 
+.summary strong{
+    color: #9d866c;
+}
+
+body section, body > div{
+    margin: 30px;
+}
 
 @media (max-width:900px) {
-    .background {
-        background-image: linear-gradient(90deg, #c6ffdd, #fbd786) fixed;
+    .projects p{
+        font-size: small;
     }
-
-    .projects {
-        margin: 5px;
-        padding: 10px;
-    }
-
-    .projects p {
-        font-size: x-small;
-    }
-
-    .projects h3{
-        padding-top: 10px;
-    }
-
-    .projects img, .projects video {
-        padding-bottom: 5px;
-    }
-
-    h1{
-        font-size: large;
-    }
-     h2{
-        font-size: medium;
-     }
 }
-
-@media (max-width:400px){
-    #ui-projects, #flutter-projects, #java-projects{
-        flex-wrap: wrap;
-    }
-
-    .background {
-        background-image: linear-gradient(90deg, #c6ffdd, #fbd786) fixed;
-    }
-
-    .projects {
-        margin: 5px;
-        padding: 10px;
-    }
-
-    .projects p {
-        font-size: x-small;
-    }
-
-    .projects h3{
-        padding-top: 10px;
-    }
-
-    .projects img, .projects video {
-        padding-bottom: 5px;
-    }
-
-    h1{
-        font-size: large;
-    }
-     h2{
-        font-size: medium;
-     }
-}
-
 
