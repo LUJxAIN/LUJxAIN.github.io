@@ -5,110 +5,146 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projects</title>
         <link rel="stylesheet" type="text/css" href="CSS/cssweb.css">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
 
-    <body class="background">
+    <body class="background" id="project-details">
         <header>
-            <nav class="navbar navbar-expand navbar-light flex-column flex-md-row bd-navbar">
-              <a class="navbar-brand" href="index.html">Lujain Bajunaid</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-md-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="info.html">About</a>
-                  </li>
-                  
-                  <li class="nav-item active">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                  </li>
+          <nav class="navbar navbar-expand navbar-light flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand" href="index.html"><img src="image/logo2.png" alt="My logo" width="200" height="80"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Projects</a>
+                </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact_me.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+                <li class="nav-item">
+                  <a class="nav-link" href="info.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contact_me.html">Contact Me</a>
+                </li>
+              </ul>
+              
+            </div>
+      
+          </nav>
           </header>
 
         <section id="projects">
-            <h1>My projects</h1>
-            <section id="ui-projects">
-              <h2>UI projects</h2>
-              <section id="project1" class="projects">
-                <h3>Thabbit</h3>
-                <section>
-                  <p>This is a UI design that I worked on with a team,<br>where we participated in
-                    UoJ contest for using<br>technology for Quraan.<br><br>
-                    <a href="https://www.figma.com/proto/2bk4vOhwBvfAJQhbB3pH6I/Thabbit?node-id=1-7053&node-type=canvas&t=02lyOYtLW5NF6WpD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A7049"><strong><em>Try prototype</em></strong></a>
-                  </p>
-            
-                  <img src="image/project1.png" alt="ui design" height="230" width="100">
-                  <img src="image/project1.1.png" alt="ui design2" height="230" width="100">
-                </section>
-              </section>
-            
-              <section id="project2" class="projects">
+              <section id="restaurants" class="cards">
                 <h3>Restaurants</h3>
-                <section>
-                  <p>This is a UI design for a restaurants app, <br>where the user can view
+                <div>
+                  <p>This is a UI design for a restaurants app, where the user can view
                     restaurants, their menu and rating<br><br>
                     <a href="https://www.figma.com/proto/C5V5CK2nlXL3JoD2L13y2M/Restaurant?node-id=26-83&node-type=canvas&t=ZqYHfdAJGFDlCouX-1&scaling=scale-down&content-scaling=fixed&page-id=26%3A81&starting-point-node-id=26%3A83"><strong><em>Try prototype</em></strong></a>
                   </p>
-            
-                  <img src="image/project2.png" alt="ui design" height="230" width="100">
-                </section>
-              </section>
-            </section>
+                  <div class="grid-container">
+                    <div class="grid-content">
+                      <h4>Project Idea</h4>
+                      <p>UI design suggestion for restaurants app that contains restaurants menu, ratings, and a list of previously visited/rated restaurants.</p>
+                    </div>
 
-            <section id="flutter-projects">
-              <h2>Flutter projects</h2>
-              <section id="f-project1" class="projects">
-                <h3>To-do list</h3>
-                <section>
-                  <p>This is a Flutter to-do list app.<br>It allows the user to add lists daily<br>
-                    monthly, or yearly.
+                    <div class="grid-content">
+                      <h4>Role</h4>
+                      <p>UI Design</p>
+                    </div>
+
+                    <div class="grid-content">
+                      <h4>Tools</h4>
+                      <p>Figma</p>
+                    </div>
+                  </div>
+                  <img src="image/restApp.png" alt="Restaurants ui design">
+                </div>
+              </section>
+
+              <section id="thabbit" class="cards">
+                <h3>Thabbit</h3>
+                <div>
+                  <p>This is a UI design that I worked on with a team, where we participated in
+                    UoJ contest of using technology for Quraan.<br><br>
+                    <a href="https://www.figma.com/proto/2bk4vOhwBvfAJQhbB3pH6I/Thabbit?node-id=1-7053&node-type=canvas&t=02lyOYtLW5NF6WpD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A7049"><strong><em>Try prototype</em></strong></a>
                   </p>
-                  <p></p>
-                  <p></p>
-                   <video height="300" width="125" autoplay muted>
-                    <source src="image/flutter-vid.mp4">
-                   </video>
-                </section>
-              </section>
-            </section>
+                  <div class="grid-container">
+                    <div class="grid-content">
+                      <h4>Project Idea</h4>
+                      <p>Thabbit is an app that helps with memorizing Quraan within a community by utilizing gamification, 1:1 sessions, and challenges</p>
+                    </div>
 
-            <section id="java-projects">
-              <h2>Java projects</h2>
-              <section id="j-project1" class="projects">
-                <h3>UJ events app</h3>
-                <section>
-                  <p>I worked on a Java swing application with a colleague.<br>It allows both students and employees at UoJ
-                    to view<br>and register in events at the university. We also worked<br>on integrating with a database.
-                  <p>
-                  <img src="image/j-project1.png" alt="ui design" height="200" width="200">
-                </section>
-              </section>
+                    <div class="grid-content">
+                      <h4>Role</h4>
+                      <p>UI Design<br>Features suggestions<br>Logo design</p>
+                    </div>
 
-              <section id="j-project2" class="projects">
-                <h3>Ordering application</h3>
-                <section>
-                  <p>An interactive ordering application that allows the user to order from<br>
-                    several categories, select the delivery type, and view order details<br>
-                    and history.<br><br>
-                    -Special property to offer discounts for previous users-
-                  <p>
-                </section>
+                    <div class="grid-content">
+                      <h4>Tools</h4>
+                      <p>Figma</p>
+                    </div>
+                  </div>
+                  <img src="image/thabbit.png" alt=" Thabbit ui design1">
+                  <img src="image/thabbit2.png" alt="Thabbit ui design2">
+                </div>
               </section>
 
-            
-            </section>
+              <section id="thabbit" class="cards">
+                <h3>DONE.</h3>
+                <div>
+                  <p>This is a to-do app that enables the user to track daily tasks, and view it in a monthly calendar</a>
+                  </p>
+                  <div class="grid-container">
+                    <div class="grid-content">
+                      <h4>Project Idea</h4>
+                      <p>DONE. is a to-do list app, where the user is able to add tasks daily, or monthly</p>
+                    </div>
+
+                    <div class="grid-content">
+                      <h4>Features</h4>
+                      <p>Track daily tasks completion<br>Add tasks for the month<br>Light/Dark Modes<br>Design Suggesstion for sync between devices by using an account</p>
+                    </div>
+
+                    <div class="grid-content">
+                      <h4>Languages</h4>
+                      <p>Flutter/Dart</p>
+                    </div>
+                  </div>
+                  <img src="image/thabbit.png" alt=" Thabbit ui design1">
+                  <img src="image/thabbit2.png" alt="Thabbit ui design2">
+                </div>
+              </section>
+
+              <section id="dictionary" class="cards">
+                <h3>Word's Dictionary</h3>
+                <div>
+                  <p>Website to seach for words definition, phonetics, examples, synonyms, and antonyms.<br>
+                  </p>
+                  <div class="grid-container">
+                    <div class="grid-content">
+                      <h4>Project Idea</h4>
+                      <p>A dictionary like website that uses AJAX to communicate with an API to retrieve words definition, phonetics, examples, synonyms, and antonyms. </p>
+                    </div>
+
+                    <div class="grid-content">
+                      <h4>Role</h4>
+                      <p>UI Design<br>Front-end<br>Back-end</p>
+                    </div>
+
+                    <div class="grid-content">
+                      <h4>Languages</h4>
+                      <p>HTML<br>CSS<br>Javascript</p>
+                    </div>
+                  </div>
+                  <img src="image/dictionary.png" alt="word's dictionary website">
+                </div>
+              </section>
       </section>
-      
-      
+       <script src="JS/script.js"></script>
     </body>
 
 </html>
