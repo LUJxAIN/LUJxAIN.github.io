@@ -4,6 +4,7 @@ if (window.location.pathname.endsWith("index.html")) {
   let thabbit_link = document.getElementById('thabbit');
   let to_do_link = document.getElementById('to-do');
   let dictionary_link = document.getElementById('dictionary');
+  let cruise_link = document.getElementById('cruise');
 
   restApp_link.addEventListener("click", (event) => {
     // Prevent default behavior of the link
@@ -36,6 +37,14 @@ if (window.location.pathname.endsWith("index.html")) {
     // Set the href with query parameter
     window.location.href = "projects.html?project=dictionary";  // Pass the query parameter to projects.html
   });
+
+  cruise_link.addEventListener("click", (event) => {
+    // Prevent default behavior of the link
+    event.preventDefault();
+    
+    // Set the href with query parameter
+    window.location.href = "projects.html?project=cruise";  // Pass the query parameter to projects.html
+  });
 }
 
 if (window.location.pathname.endsWith("projects.html")) {
@@ -47,4 +56,24 @@ if (window.location.pathname.endsWith("projects.html")) {
   app_to_show.style.display = "inline-block";  // Show the element
 }
 
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
