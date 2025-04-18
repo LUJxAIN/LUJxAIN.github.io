@@ -38,13 +38,7 @@ if (window.location.pathname.endsWith("index.html")) {
     window.location.href = "projects.html?project=dictionary";  // Pass the query parameter to projects.html
   });
 
-  cruise_project_link.addEventListener("click", (event) => {
-    // Prevent default behavior of the link
-    event.preventDefault();
-    
-    // Set the href with query parameter
-    window.location.href = "projects.html?project=cruise";  // Pass the query parameter to projects.html
-  });
+  
 }
 
  
