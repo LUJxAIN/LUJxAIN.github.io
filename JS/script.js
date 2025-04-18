@@ -4,7 +4,7 @@ if (window.location.pathname.endsWith("index.html")) {
   let thabbit_link = document.getElementById('thabbit');
   let to_do_link = document.getElementById('to-do');
   let dictionary_link = document.getElementById('dictionary');
-  
+  let cruise_project_link = document.getElementById('cruise');
 
   restApp_link.addEventListener("click", (event) => {
     // Prevent default behavior of the link
@@ -37,6 +37,15 @@ if (window.location.pathname.endsWith("index.html")) {
     // Set the href with query parameter
     window.location.href = "projects.html?project=dictionary";  // Pass the query parameter to projects.html
   });
+
+  cruise_project_link.addEventListener("click", (event) => {
+    // Prevent default behavior of the link
+    event.preventDefault();
+    
+    // Set the href with query parameter
+    window.location.href = "projects.html?project=cruise";  // Pass the query parameter to projects.html
+  });
+}
 
  
 
