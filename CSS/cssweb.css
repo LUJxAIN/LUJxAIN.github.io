@@ -230,7 +230,7 @@ body>div {
         font-size: small;
     }
 }
-
+/* For smaller screen sizes */
 @media screen and (max-width:750px) {
     .project-card{
         grid-template-columns: 1fr;
