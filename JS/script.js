@@ -45,7 +45,7 @@ if (window.location.pathname.endsWith("index.html")) {
     // Set the href with query parameter
     window.location.href = "projects.html?project=cruise";  // Pass the query parameter to projects.html
   });
-}
+
 
  
 
