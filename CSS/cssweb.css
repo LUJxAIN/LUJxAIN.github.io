@@ -231,6 +231,23 @@ body>div {
     }
 }
 
+@media screen and (max-width:750px) {
+    .project-card{
+        grid-template-columns: 1fr;
+        width: 300px;
+        margin-bottom: 100px;
+    }
+
+    .project-card .content{
+        padding: 20px 0;
+    }
+
+    .project-card img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
 :root {
     --c-grey-100: #f4f6f8;
     --c-grey-200: #e3e3e3;
