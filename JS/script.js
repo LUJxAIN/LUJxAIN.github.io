@@ -1,5 +1,5 @@
 // Check which page we're on
-if (window.location.pathname.endsWith("index.html")) {
+if (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("/")) {
   let restApp_link = document.getElementById("restaurants");
   let thabbit_link = document.getElementById('thabbit');
   let to_do_link = document.getElementById('to-do');
