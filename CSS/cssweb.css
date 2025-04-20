@@ -318,4 +318,9 @@ body>div {
         max-width: 400px;
         padding: 0 30px;
     }
+
+    #who-am-i{
+        max-width: 400px;
+        padding: 0 30px 80px 30px;
+    }
 }
