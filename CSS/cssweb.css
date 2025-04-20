@@ -1,37 +1,23 @@
+
+:root {
+    --c-grey-100: #f4f6f8;
+    --c-grey-200: #e3e3e3;
+    --c-grey-300: #b2b2b2;
+    --c-grey-400: #7b7b7b;
+    --c-grey-500: #3d3d3d;
+}
+
+/* Class selector */
+
 .background {
     position: relative;
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-image: url("../image/background2.png");
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
     background-position: right bottom;
     font-family: 'Crimson Pro';
-}
-
-.summary {
-    padding-top: 50px;
-}
-
-.circular_logo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: 3px 5px 5px gray;
-}
-
-.contact {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contact a {
-    padding: 30px;
-}
-
-.social{
-    margin-top: 5px;
-    margin-right: 15px;
 }
 
 .project-card {
@@ -53,80 +39,10 @@
     color: #FAF9F6;
 }
 
-.cards img {
+
+.cards img, .cards video{
     padding-bottom: 50px;
-}
-
-.socials{
-    padding: 30px 0;
-    width: 400px;
-    display: flex;
-    gap: 30px;
-}
-
-#summary a {
-    color: #0B1215;
-    font-weight: bold;
-    font-size: medium;
-    text-decoration: none;
-    border: 2px solid #0B1215;
-    border-radius: 25px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    display: block;
-    margin: auto;
-    width: 250px;
-}
-
-#summary a:hover {
-    color: #FAF9F6;
-    background-color: #0B1215;
-    border: 2px solid #0B1215;
-}
-
-#Contact_me {
-    width: 400px;
-    height: 300px;
-    background-color: rgb(255, 255, 255, 0.5);
-    border-radius: 25px;
-    margin: auto;
-    margin-top: 80px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-#Contact_me h1 {
-    text-align: center;
-    text-decoration: none;
-}
-
-.skills-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#Skills .cards p {
-    text-align: center;
-}
-
-#projects #thabbit,
-#projects #restaurants,
-#projects #to-do,
-#projects #dictionary,
-#projects #cruise {
-    display: none;
-}
-
-#who-am-i {
-    padding-bottom: 100px;
-    text-align: left;
-}
-
-#projects a {
-    cursor: pointer;
-}
+} 
 
 .content a:hover {
     color: #FAF9F6;
@@ -152,7 +68,6 @@
 .cards h4 {
     position: relative;
     font-weight: bold;
-
 }
 
 .content {
@@ -160,18 +75,6 @@
     align-items: center;
     text-align: center;
     padding: 150px 0;
-}
-
-
-#mainpage-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#mainpage-projects .project-card {
-    margin-bottom: 100px;
 }
 
 .grid-container {
@@ -184,77 +87,10 @@
     grid-template-columns: 1fr;
 }
 
-#skills img {
-    transition: transform 0.3s ease;
-}
-
-#skills img:hover {
-    transform: translateY(-10px);
-}
-
-html {
-    scroll-behavior: smooth;
-    transition: ease-in-out;
-    overflow-x: auto;
-    overflow-y: auto;
-    scrollbar-gutter: stable;
-}
-
-section {
-    padding: 20px;
-    margin-top: 30px;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    font-size: larger;
-}
-
-section h2 {
-    color: #9d866c;
-    margin-bottom: 20px;
-}
-
 .summary strong {
     color: #9d866c;
 }
 
-body section,
-body>div {
-    margin: 30px;
-}
-
-@media (max-width:900px) {
-    .projects p {
-        font-size: small;
-    }
-}
-/* For smaller screen sizes */
-@media screen and (max-width:750px) {
-    .project-card{
-        grid-template-columns: 1fr;
-        width: 300px;
-        margin-bottom: 100px;
-    }
-
-    .project-card .content{
-        padding: 20px 0;
-    }
-
-    .project-card img{
-        height: 300px;
-        width: 300px;
-    }
-}
-
-:root {
-    --c-grey-100: #f4f6f8;
-    --c-grey-200: #e3e3e3;
-    --c-grey-300: #b2b2b2;
-    --c-grey-400: #7b7b7b;
-    --c-grey-500: #3d3d3d;
-}
 
 .timeline {
     width: 85%;
@@ -332,8 +168,10 @@ body>div {
     margin-bottom: 30px;
 }
 
+/* Style the buttons that are used to open the tab content */
 .tab button {
     background-color: inherit;
+    color: black;
     border: none;
     outline: none;
     cursor: pointer;
@@ -343,19 +181,141 @@ body>div {
 }
 
 
+/* Change background color of buttons on hover */
 .tab button:hover {
     background-color: rgba(157, 134, 108, 0.5);
     border-radius: 8px;
     outline: none;
 }
 
+/* Create an active/current tablink class */
 .tab button.active {
     position: relative;
     border-bottom: 2px solid #9d866c;
     outline: none;
 }
 
+/* Style the tab content */
 .tabcontent {
     display: none;
     padding: 6px 12px;
+}
+
+/* ID selector */
+
+#projects #thabbit,
+#projects #restaurants,
+#projects #to-do,
+#projects #dictionary,
+#projects #cruise {
+    display: none;
+}
+
+#who-am-i {
+    padding-bottom: 100px;
+    text-align: left;
+}
+
+#projects a {
+    cursor: pointer;
+}
+
+#mainpage-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainpage-projects .project-card {
+    margin-bottom: 100px;
+}
+
+#skills img {
+    transition: transform 0.3s ease;
+}
+
+#skills img:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Type/element selector */
+
+html {
+    scroll-behavior: smooth;
+    transition: ease-in-out;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+section {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: larger;
+}
+
+section h2 {
+    color: #9d866c;
+    margin-bottom: 20px;
+}
+
+body section,
+body>div {
+    margin: 30px;
+}
+
+@media (max-width:900px) {
+    .projects p {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .project-card{
+        grid-template-columns: 1fr;
+        width: 300px;
+        margin-bottom: 100px;
+    }
+
+    .project-card .content{
+        padding: 20px 0;
+    }
+
+    .project-card img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .cards div{
+        max-width: 400px;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .cards img, .cards video{
+        width: 350px;
+        height: 200px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    body section{
+        padding: 0;
+        margin: 0;
+    }
+
+    #about-me{
+        max-width: 400px;
+        padding: 0 30px;
+    }
 }
